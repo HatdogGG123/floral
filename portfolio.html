@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Floraly | Contacts</title>
+  
+  <!-- Google Fonts (Playfair Display, Montserrat) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS CDN Link -->
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <style type="text/tailwindcss">
+    @theme {
+        --color-primary: #283618;
+        --color-secondary: #606C38;
+        --color-background: #FEFAE0;
+        --color-white: #f2f2f2;
+        --color-black: #202020;
+        --color-disabled: #E5E5E5;
+        --color-error-dark: #9E2A2B;
+        --color-error-light: #9E2A2B50;
+        
+        --font-playfair: "Playfair Display";
+        --font-montserrat: "Montserrat";
+      }
+      
+      #hero {
+        background-image: url('./image/contact-hero-image-1.jpg');
+        background-size: cover;
+        background-position: center;
+      }
+      #hero::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 8dvh;
+        bottom: 0;
+        left: 0;
+        z-index: 9;
+        background: linear-gradient(0deg, rgba(254, 250, 224, 1) 0%, rgba(254, 250, 224, 0) 100%);
+      }
+    </style>
+  
+  
+  <!-- JQuery CRN Link -->
+  <script src="https://code.jquery.com/jquery-4.0.0.js" integrity="sha256-9fsHeVnKBvqh3FB2HYu7g2xseAZ5MlN6Kz/qnkASV8U=" crossorigin="anonymous"></script>
+</head>
+
+<body class="scroll-smooth relative body w-full h-dvh bg-background">
+  <!-- Hero Section -->
+  <section id="hero" class="relative flex items-center justify-center p-5 w-full h-3/4 lg:h-[50dvh]">
+    <!-- Header -->
+    <header class="fixed top-0 left-0 z-50 p-5 w-full h-15 flex items-center justify-between transition duration-500 ease-out">
+      <a href="#hero" class="logo-title translate-y-10 opacity-0 transition duration-1000 ease-out font-playfair text-white text-[clamp(28px,2.5vw,40px)]">Floral</a>
+      
+      <button id="toggleNavBtn" class="translate-y-10 opacity-0 flex flex-col gap-1 transition duration-1000 delay-300 ease-out items-center justify-center lg:hidden">
+        <div id="arm1" class="w-5 h-0.5 bg-white rounded-full transition duration-300"></div>
+        <div id="arm3" class="w-5 h-0.5 bg-white rounded-full transition duration-300"></div>
+        <div id="arm2" class="w-5 h-0.5 bg-white rounded-full transition duration-300"></div>
+      </button>
+      
+      <!-- Large Screen Navbar  -->
+      <nav id=largeScreenNav class="hidden gap-5 w-full h-full items-center justify-end lg:flex">
+        <a href="index.html" class="text-md text-white font-montserrat">Home</a>
+        <a href="portfolio.html" class="text-md text-white font-montserrat">Portfolio</a>
+        <a href="service.html" class="text-md text-white font-montserrat">Services</a>
+        <a href="contact.html" class="text-md text-white font-montserrat">Contact Us</a>
+      </nav>
+    </header>
+    
+    <section class="w-full h-full lg:h-full pt-20 pb-15 landscape:pb-5">
+      <section class="h-full w-full flex flex-col justify-end">
+        <p class="slide-up font-playfair text-white text-4xl font-semibold translate-y-10 opacity-0 transition duration-1000 ease-out delay-200 md:text-6xl lg:text-[clamp(60px,5vw,80px)]">PORTFOLIO</p>
+      </section>
+    </section>
+  </section>
+  
+  <!-- Wedding Event -->
+  <section id="wedding" class="w-full h-fit p-5 flex flex-col gap-10 pt-20">
+    <p class="text-center font-playfair text-4xl font-medium md:text-6xl lg:text-[clamp(60px,5vw,80px)]">Wedding</p>
+    <section class="grid grid-cols-1 gap-10 w-full h-fit content-center justify-center items-center md:grid-cols-2 lg:grid-cols-3">
+      <!-- Portfolio 1 -->
+      <section class="flex flex-col gap-2 h-fit">
+        <div class="aspect-2/3 w-full">
+          <img loading="lazy" src="../image/portfolio-image-1.jpg" alt="" class="object-cover object-center size-full">
+        </div>
+        <p class="text-center font-montserrat tracking-widest">JOHN & CATH</p>
+      </section>
+      
+      <!-- Portfolio 2 -->
+      <section class="flex flex-col gap-2 h-fit">
+        <div class="aspect-2/3 w-full">
+          <img loading="lazy" src="../image/testimonial-image-2.jpg" alt="" class="object-cover object-center size-full">
+        </div>
+        <p class="text-center font-montserrat tracking-widest">DANE & ANGELA</p>
+      </section>
+      
+      <!-- Portfolio 3 -->
+      <section class="flex flex-col gap-2 h-fit">
+        <div class="aspect-2/3 w-full">
+          <img loading="lazy" src="../image/portfolio-image-3.jpg" alt="" class="object-cover object-center size-full">
+        </div>
+        <p class="text-center font-montserrat tracking-widest">GILBERT & BIANCA</p>
+      </section>
+      
+      <!-- Portfolio 4 -->
+      <section class="flex flex-col gap-2 h-fit">
+        <div class="aspect-2/3 w-full">
+          <img loading="lazy" src="../image/testimonial-image-3.jpg" alt="" class="object-cover object-center size-full">
+        </div>
+        <p class="text-center font-montserrat tracking-widest">JOHN & KATE</p>
+      </section>
+    </section>
+  </section>
+  
+  <!-- Special Ocassion -->
+  <section id="specialOcassion" class="w-full h-fit p-5 flex flex-col gap-10 pt-20">
+    <p class="text-center font-playfair text-4xl font-medium md:text-6xl lg:text-[clamp(60px,5vw,80px)]">Special Ocassions</p>
+    <section class="grid grid-cols-1 gap-10 w-full h-fit md:grid-cols-2 lg:grid-cols-3">
+      <!-- Portfolio 1 -->
+      <section class="flex flex-col gap-2 h-fit">
+        <div class="aspect-2/3 w-full">
+          <img loading="lazy" src="../image/portfolio-image-2.jpg" alt="" class="object-cover object-center size-full">
+        </div>
+        <p class="text-center font-montserrat tracking-widest">KIESHA'S DEBUT</p>
+      </section>
+    </section>
+  </section>
+  
+  <!-- Special Ocassion -->
+  <section id="specialOcassion" class="w-full h-fit p-5 flex flex-col gap-10 pt-20">
+    <p class="text-center font-playfair text-4xl font-medium md:text-6xl lg:text-[clamp(60px,5vw,80px)]">Corporate Events</p>
+    <section class="grid grid-cols-1 gap-10 w-full h-fit md:grid-cols-2 lg:grid-cols-3">
+      <!-- Portfolio 1 -->
+      <section class="flex flex-col gap-2 h-fit">
+        <div class="aspect-2/3 w-full">
+          <img loading="lazy" src="../image/service-corporate-event-image.jpg" alt="" class="object-cover object-center size-full">
+        </div>
+        <p class="text-center font-montserrat tracking-widest">FLORAL'S AWARDING NIGHT</p>
+      </section>
+    </section>
+  </section>
+  
+  <section class="w-full h-fit p-5">
+    <section class="relative w-full h-full aspect-square overflow-hidden flex flex-col gap-5 items-center justify-center sm:aspect-video lg:aspect-5/2">
+      <img loading="lazy" src="../image/faq-image-1.jpg" alt="" class="w-full h-full absolute z-10 top-0 left-0 object-cover lg:object-center" />
+      <div class="absolute z-20 top-0 left-0 w-full h-full bg-black/30"></div>
+      
+      <section class="absolute z-30 top-0 left-0 w-full h-full flex flex-col items-center justify-center gap-5 text-center p-5">
+        <p class="text-white text-[clamp(32px,5vw,60px)] font-playfair font-medium">Need a florist for your next event?</p>
+        <a href="contact.html" class="bg-primary flex items-center gap-1 px-3 py-2">
+          <p class="text-white text-sm font-montserrat md:text-md lg:text-lg">Contact us</p>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-up-right-icon lucide-arrow-up-right text-white size-5">
+            <path d="M7 7h10v10" />
+            <path d="M7 17 17 7" />
+          </svg>
+        </button>
+      </a>
+    </section>
+  </section>
+  
+  <footer class="py-3 px-10">
+    <p class="font-montserrat text-center text-sm md:text-lg">&copy; Floral 2026 - A project website for portfolio showcasing by Renzo Tolentino</p>
+  </footer>
+  
+  <!-- Small Screen Navbar  -->
+  <nav id="smallScreenNav" class="hidden text-white font-montserrat p-5 pt-25 fixed z-40 top-0 left-0 h-dvh w-full bg-secondary flex flex-col items-center justify-center gap-5">
+    <div class="flex flex-col gap-5 w-full h-full items-center justify-center md:gap-10">
+      <a href="index.html" class="text-2xl font-montserrat font-light md:text-4xl">Home</a>
+      <a href="portfolio.html" class="text-2xl font-montserrat font-light md:text-4xl">Portfolio</a>
+      <a href="service.html" class="text-2xl font-montserrat font-light md:text-4xl">Services</a>
+      <a href="contact.html" class="text-2xl font-montserrat font-light md:text-4xl">Contact us</a>
+    </div>
+  </nav>
+</body>
+
+<script src="./js/portfolio-page-script.js"></script>
+
+</html>
