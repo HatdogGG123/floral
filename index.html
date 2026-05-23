@@ -1,0 +1,391 @@
+<!doctype html>
+<html class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Google Fonts (Playfair Display, Montserrat) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS CDN Link -->
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <style type="text/tailwindcss">
+    @theme {
+        --color-primary: #283618;
+        --color-secondary: #606C38;
+        --color-background: #FEFAE0;
+        --color-white: #f2f2f2;
+        --color-black: #202020;
+        --color-disabled: #E5E5E5;
+        --color-error-dark: #9E2A2B;
+        --color-error-light: #9E2A2B50;
+        
+        --font-playfair: "Playfair Display";
+        --font-montserrat: "Montserrat";
+      }
+    </style>
+  
+  <style>
+    #hero {
+      background-image: url("./image/landing-image.jpg");
+      background-size: cover;
+      background-position: center;
+    }
+    
+    #hero::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 10dvh;
+      bottom: 0;
+      left: 0;
+      z-index: 9;
+      background: linear-gradient(0deg, rgba(254, 250, 224, 1) 0%, rgba(254, 250, 224, 0) 100%);
+    }
+  </style>
+  
+  <!-- JQuery CRN Link -->
+  <script src="https://code.jquery.com/jquery-4.0.0.js" integrity="sha256-9fsHeVnKBvqh3FB2HYu7g2xseAZ5MlN6Kz/qnkASV8U=" crossorigin="anonymous"></script>
+</head>
+
+<body class="scroll-smooth relative body w-full h-dvh bg-background">
+  <!-- Hero Section -->
+  <section id="hero" class="flex items-center justify-center p-5 w-full h-full">
+    <!-- Header -->
+    <header class="fixed top-0 left-0 z-50 p-5 w-full h-15 flex items-center justify-between transition duration-500 ease-out">
+      <a href="#hero" class="logo-title translate-y-10 opacity-0 transition duration-1000 ease-out font-playfair text-white text-[clamp(28px,2.5vw,40px)]">Floral</a>
+      
+      <button id="toggleNavBtn" class="translate-y-10 opacity-0 flex flex-col gap-1 transition duration-1000 delay-300 ease-out items-center justify-center lg:hidden">
+        <div id="arm1" class="w-5 h-0.5 bg-white rounded-full transition duration-300"></div>
+        <div id="arm3" class="w-5 h-0.5 bg-white rounded-full transition duration-300"></div>
+        <div id="arm2" class="w-5 h-0.5 bg-white rounded-full transition duration-300"></div>
+      </button>
+      
+      <!-- Large Screen Navbar  -->
+      <nav class="hidden gap-5 w-full h-full items-center justify-end lg:flex">
+        <a href="index.html" class="text-md text-white font-montserrat">Home</a>
+        <a href="portfolio.html" class="text-md text-white font-montserrat">Portfolio</a>
+        <a href="service.html" class="text-md text-white font-montserrat">Services</a>
+        <a href="contact.html" class="text-md text-white font-montserrat">Contact Us</a>
+      </nav>
+    </header>
+    
+    <section class="flex flex-col items-center justify-center gap-5">
+      <p class="landing-text font-playfair text-4xl text-white font-semibold text-center text-center md:text-6xl md:w-140 lg:text-7xl lg:w-180">
+        <span class="translate-y-10 transition duration-1000 ease-out delay-0 inline-block opacity-0">Exceptional</span>
+        <span class="translate-y-10 transition duration-1000 ease-out delay-100 inline-block opacity-0">Florals,</span>
+        <span class="translate-y-10 transition duration-1000 ease-out delay-300 inline-block opacity-0 overflow-hidden inline-block align-middle w-20 h-10 rounded-full">
+          <img src="./image/landing-span-image-1.jpg" class="object-cover" />
+        </span>
+        <span class="translate-y-10 transition duration-1000 ease-out delay-400 inline-block opacity-0">Intentionally</span>
+        <span class="translate-y-10 transition duration-1000 ease-out delay-500 inline-block opacity-0">Designed</span>
+        <span class="translate-y-10 transition duration-1000 ease-out delay-600 inline-block opacity-0 overflow-hidden inline-block align-middle w-20 h-10 rounded-full">
+          <img src="./image/landing-span-image-2.jpg" class="object-cover" />
+        </span>
+      </p>
+      
+      <a href="portfolio.html" id="showPortfolioBtn" class="scale-0 transition duration-1000 delay-300 ease-out bg-background flex items-center gap-1 px-3 py-2 rounded-full">
+        <p class="font-montserrat text-md">See Portfolio</p>
+        <div class="bg-primary aspect-square h-8 rounded-full flex items-center justify-center">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-up-right-icon lucide-arrow-up-right text-white size-5">
+            <path d="M7 7h10v10" />
+            <path d="M7 17 17 7" />
+          </svg>
+        </div>
+      </a>
+    </section>
+  </section>
+  
+  <!-- Services Section -->
+  <section id="service" class="w-full h-fit p-5 pt-20 flex flex-col gap-10">
+    <!-- Header -->
+    <section class="flex items-center gap-5 w-full">
+      <p class="text-[clamp(32px,5vw,60px)] font-playfair text-primary font-semibold">Services</p>
+      <div class="h-0.25 rounded-full grow bg-primary opacity-20"></div>
+      <a href="services.html" class="bg-primary flex items-center gap-1 px-3 py-2">
+        <p class="text-white text-sm font-montserrat md:text-md lg:text-lg">Learn more</p>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-up-right-icon lucide-arrow-up-right text-white size-5">
+          <path d="M7 7h10v10" />
+          <path d="M7 17 17 7" />
+        </svg>
+      </a>
+    </section>
+    
+    <section class="grid grid-cols-1 gap-20 w-full md:grid-cols-2 lg:grid-cols-3">
+      <!-- Wedding -->
+      <section class="flex flex-col gap-2 h-fit">
+        <div class="aspect-square w-full">
+          <img loading="lazy" src="./image/service-wedding-image.jpg" alt="" class="object-cover object-center size-full">
+        </div>
+        <p class="text-center font-montserrat tracking-widest">WEDDINGS</p>
+      </section>
+      
+      <!-- Special Occasions -->
+      <section class="flex flex-col gap-2 h-fit">
+        <div class="aspect-square w-full">
+          <img loading="lazy" src="./image/service-special-event-image.jpg" alt="" class="object-cover object-center size-full">
+        </div>
+        <p class="text-center font-montserrat tracking-widest">SPECIAL OCCASIONS</p>
+      </section>
+      
+      <!-- Corporate Events -->
+      <section class="flex flex-col gap-2 h-fit">
+        <div class="aspect-square w-full">
+          <img loading="lazy" src="./image/service-corporate-event-image.jpg" alt="" class="object-cover object-center size-full">
+        </div>
+        <p class="text-center font-montserrat tracking-widest">CORPORATE EVENTS</p>
+      </section>
+    </section>
+  </section>
+  
+  <!-- Portfolio Section -->
+  <section id="portfolio" class="w-full h-fit p-5 pt-20 flex flex-col gap-10">
+    <!-- Header -->
+    <section class="flex items-center gap-5 w-full">
+      <p class="text-[clamp(32px,5vw,60px)] font-playfair text-primary font-semibold">Portfolio</p>
+      <div class="h-0.25 rounded-full grow bg-primary opacity-20"></div>
+      <a href="portfolio.html" class="bg-primary flex items-center gap-1 px-3 py-2">
+        <p class="text-white text-sm font-montserrat md:text-md lg:text-lg">See more</p>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-up-right-icon lucide-arrow-up-right text-white size-5">
+          <path d="M7 7h10v10" />
+          <path d="M7 17 17 7" />
+        </svg>
+      </a>
+    </section>
+    
+    <!-- Services Section -->
+    <section class="grid grid-cols-1 gap-20 w-full md:grid-cols-2 lg:grid-cols-3">
+      <!-- Portfolio 1 -->
+      <section class="flex flex-col gap-2 h-fit">
+        <div class="aspect-2/3 w-full">
+          <img loading="lazy" src="./image/portfolio-image-1.jpg" alt="" class="object-cover object-center size-full">
+        </div>
+        <p class="text-center font-montserrat tracking-widest">JOHN & CATH</p>
+      </section>
+      
+      <!-- Portfolio 2 -->
+      <section class="flex flex-col gap-2 h-fit">
+        <div class="aspect-2/3 w-full">
+          <img loading="lazy" src="./image/portfolio-image-2.jpg" alt="" class="object-cover object-center size-full">
+        </div>
+        <p class="text-center font-montserrat tracking-widest">KIESHA'S DEBUT</p>
+      </section>
+      
+      <!-- Portfolio 3 -->
+      <section class="flex flex-col gap-2 h-fit">
+        <div class="aspect-2/3 w-full">
+          <img loading="lazy" src="./image/portfolio-image-3.jpg" alt="" class="object-cover object-center size-full">
+        </div>
+        <p class="text-center font-montserrat tracking-widest">GILBERT & BIANCA</p>
+      </section>
+    </section>
+  </section>
+  
+  <!-- Testimonial Section -->
+  <section id="testimonial" class="w-full h-fit p-5 pt-20 flex flex-col gap-10">
+    <!-- Header -->
+    <section class="flex items-center gap-5 w-full">
+      <p class="text-[clamp(32px,5vw,60px)] font-playfair text-primary font-semibold">Satisfied Customers</p>
+      <div class="h-0.25 rounded-full grow bg-primary opacity-20"></div>
+    </section>
+    
+    <section class="grid grid-cols-1 gap-20 w-full md:grid-cols-2 lg:grid-cols-3 lg:items-center">
+      <!-- Testimonial 1 -->
+      <section class="flex flex-col gap-2 h-fit">
+        <div class="relative aspect-2/3 w-full lg:aspect-square">
+          <img loading="lazy" src="./image/testimonial-image-1.jpg" alt="" class="absolute z-0 object-cover object-center size-full">
+          <div class="absolute w-full h-full z-10 bg-black/50"></div>
+          <div class="absolute w-full h-full p-5 z-20">
+            <div class="w-full h-full border border-white p-3 gap-2 flex flex-col items-center justify-center">
+              <p class="text-white text-center text-sm font-montserrat">
+                "Working with this team for our daughter’s debut was an absolute dream. The floral arrangements were breathtaking and completely transformed the venue into a fairytale setting. Their attention to detail and creative vision exceeded everything we had imagined. We cannot recommend them enough for any special occasion!"
+              </p>
+              <p class="italic tracking-widest text-white font-medium">-BRYLE WHITE</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <!-- Testimonial 2 -->
+      <section class="flex flex-col gap-2 h-fit">
+        <div class="relative aspect-2/3 w-full">
+          <img loading="lazy" src="./image/testimonial-image-2.jpg" alt="" class="absolute z-0 object-cover object-center size-full">
+          <div class="absolute w-full h-full z-10 bg-black/50"></div>
+          <div class="absolute w-full h-full p-5 z-20">
+            <div class="w-full h-full border border-white p-3 gap-2 flex flex-col items-center justify-center">
+              <p class="text-white text-center text-sm font-montserrat">
+                "We were absolutely blown away when we walked into our reception hall—it felt like stepping into a dream. The team took our vague ideas and turned them into the most beautiful, elegant floral installations we’ve ever seen. Our guests are still talking about how stunning the ceremony arch was. Thank you for making our wedding day look so magical!"
+              </p>
+              <p class="italic tracking-widest text-white font-medium">-DANE & ANGELA</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <!-- Testimonial 3 -->
+      <section class="flex flex-col gap-2 h-fit">
+        <div class="relative aspect-2/3 w-full lg:aspect-square">
+          <img loading="lazy" src="./image/testimonial-image-3.jpg" alt="" class="absolute z-0 object-cover object-center size-full">
+          <div class="absolute w-full h-full z-10 bg-black/50"></div>
+          <div class="absolute w-full h-full p-5 z-20">
+            <div class="w-full h-full border border-white p-3 gap-2 flex flex-col items-center justify-center">
+              <p class="text-white text-center text-sm font-montserrat">
+                - "We cannot thank the team enough for making our wedding day look absolutely spectacular. John and I had a specific vision for our floral design, and they brought it to life even better than we could have imagined. My bridal bouquet was stunning, and the reception venue felt incredibly romantic and elegant. If you want a stress-free experience and breathtaking flowers for your big day, look no further!"
+              </p>
+              <p class="italic tracking-widest text-white font-medium">-JOHN & KATE</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </section>
+  </section>
+  
+  <!-- FAQ Section -->
+  <section id="faq" class="w-full h-fit p-5 pt-20 flex flex-col gap-10">
+    <!-- Header -->
+    <section class="flex items-center gap-5 w-full">
+      <p class="text-[clamp(32px,5vw,60px)] font-playfair text-primary font-semibold">FAQs</p>
+      <div class="h-0.25 rounded-full grow bg-primary opacity-20"></div>
+      <a href="contact.html" class="bg-primary flex items-center gap-1 px-3 py-2">
+        <p class="text-white text-sm font-montserrat md:text-md lg:text-lg">Ask more</p>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-up-right-icon lucide-arrow-up-right text-white size-5">
+          <path d="M7 7h10v10" />
+          <path d="M7 17 17 7" />
+        </svg>
+      </a>
+    </section>
+    
+    <section id="faqList" class="font-montserrat w-full flex flex-col gap-5">
+      <!-- FAQ 1 -->
+      <section class="faq-item faq-item-1 border-t-1 border-primary/20 py-10 w-full flex flex-col gap-5">
+        <div class="w-full flex gap-3 items-start">
+          <p class="font-semibold h-fit">01</p>
+          <button class="grow flex items-center text-pretty">
+            <p class="grow text-start">How far in advance should I book my event?</p>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-plus-icon lucide-plus size-6">
+              <path d="M5 12h14" />
+              <path d="M12 5v14" />
+            </svg>
+          </button>
+        </div>
+        <p id="faq-answer-1" class="text-pretty hidden">
+          We recommend booking weddings and large events 3 to 6 months in advance. This ensures we can secure your date and source the exact flowers needed for your vision.
+        </p>
+      </section>
+      
+      <!-- FAQ 2 -->
+      <section class="faq-item faq-item-2 border-t-1 border-primary/20 py-10 w-full flex flex-col gap-5">
+        <div class="w-full flex gap-3 items-start">
+          <p class="font-semibold h-fit">02</p>
+          <button class="grow flex items-center text-pretty">
+            <p class="grow text-start">Can you replicate a specific floral design I saw online?</p>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-plus-icon lucide-plus size-6">
+              <path d="M5 12h14" />
+              <path d="M12 5v14" />
+            </svg>
+          </button>
+        </div>
+        <p id="faq-answer-2" class="text-pretty hidden">
+          - While we love using your Pinterest boards for inspiration, no two arrangements are identical. We will use your references to capture the same mood, color palette, and style using the freshest seasonal blooms available.
+        </p>
+      </section>
+      
+      <!-- FAQ 3 -->
+      <section class="faq-item faq-item-2 border-t-1 border-primary/20 py-10 w-full flex flex-col gap-5">
+        <div class="w-full flex gap-3 items-start">
+          <p class="font-semibold h-fit">03</p>
+          <button class="grow flex items-center text-pretty">
+            <p class="grow text-start">
+              Do you offer delivery and on-site setup for events?
+            </p>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-plus-icon lucide-plus size-6">
+              <path d="M5 12h14" />
+              <path d="M12 5v14" />
+            </svg>
+          </button>
+        </div>
+        <p id="faq-answer-3" class="text-pretty hidden">
+          - Yes! We handle full delivery, on-site installation, and styling for all of our booked events. We want you to relax and enjoy your day while we bring the venue to life.
+        </p>
+      </section>
+      
+      <!-- FAQ 4 -->
+      <section class="faq-item faq-item-2 border-t-1 border-primary/20 py-10 w-full flex flex-col gap-5">
+        <div class="w-full flex gap-3 items-start">
+          <p class="font-semibold h-fit">04</p>
+          <button class="grow flex items-center text-pretty">
+            <p class="grow text-start">
+              What happens if a specific flower I want is out of season?
+            </p>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-plus-icon lucide-plus size-6">
+              <path d="M5 12h14" />
+              <path d="M12 5v14" />
+            </svg>
+          </button>
+        </div>
+        <p id="faq-answer-4" class="text-pretty hidden">
+          - If a requested flower is unavailable, we will substitute it with a premium bloom of equal beauty, value, and color. We always prioritize quality and freshness above all else.
+        </p>
+      </section>
+      
+      <!-- FAQ 5 -->
+      <section class="faq-item faq-item-2 border-t-1 border-primary/20 py-10 w-full flex flex-col gap-5">
+        <div class="w-full flex gap-3 items-start">
+          <p class="font-semibold h-fit">05</p>
+          <button class="grow flex items-center text-pretty">
+            <p class="grow text-start">
+              Do you have a minimum budget requirement for weddings?
+            </p>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-plus-icon lucide-plus size-6">
+              <path d="M5 12h14" />
+              <path d="M12 5v14" />
+            </svg>
+          </button>
+        </div>
+        <p id="faq-answer-5" class="text-pretty hidden">
+          - We work with a variety of budgets, but our full-service wedding packages typically start at a set minimum. Contact us today for a custom quote tailored to your specific needs.
+        </p>
+      </section>
+    </section>
+    
+    <section class="relative w-full h-full aspect-square overflow-hidden flex flex-col gap-5 items-center justify-center sm:aspect-video lg:aspect-5/2">
+      <img loading="lazy" src="./image/faq-image-1.jpg" alt="" class="w-full h-full absolute z-10 top-0 left-0 object-cover lg:object-center" />
+      <div class="absolute z-20 top-0 left-0 w-full h-full bg-black/30"></div>
+      
+      <section class="absolute z-30 top-0 left-0 w-full h-full flex flex-col items-center justify-center gap-5 text-center p-5">
+        <p class="text-white text-[clamp(32px,5vw,60px)] font-playfair font-medium">Need a florist for your next event?</p>
+        <a href="contact.html" class="bg-primary flex items-center gap-1 px-3 py-2">
+          <p class="text-white text-sm font-montserrat md:text-md lg:text-lg">Contact us</p>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-up-right-icon lucide-arrow-up-right text-white size-5">
+            <path d="M7 7h10v10" />
+            <path d="M7 17 17 7" />
+          </svg>
+        </a>
+      </section>
+    </section>
+  </section>
+  
+  <!-- Small Screen Navbar  -->
+  <nav id="smallScreenNav" class="hidden text-white font-montserrat p-5 pt-25 fixed z-40 top-0 left-0 h-dvh w-full bg-secondary flex flex-col items-center justify-center gap-5">
+    <div class="flex flex-col gap-5 w-full h-full items-center justify-center">
+      <a href="index.html" class="text-2xl font-montserrat font-light md:text-4xl">Home</a>
+      <a href="portfolio.html" class="text-2xl font-montserrat font-light md:text-4xl">Portfolio</a>
+      <a href="service.html" class="text-2xl font-montserrat font-light md:text-4xl">Services</a>
+      <a href="contact.html" class="text-2xl font-montserrat font-light md:text-4xl">Contact us</a>
+    </div>
+  </nav>
+  
+  <footer class="py-3 px-10">
+    <p class="font-montserrat text-center text-sm md:text-md">&copy; Floral 2026 - A project website for portfolio showcasing by Renzo Tolentino</p>
+  </footer>
+  
+</body>
+
+<script src="./js/landing-page-script.js"></script>
+
+</html>
