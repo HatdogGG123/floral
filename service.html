@@ -32,7 +32,7 @@
       }
       
       #hero {
-        background-image: url('./image/faq-image-1.jpg');
+        background-image: url('./image/service-hero-image.jpg');
         background-size: cover;
         background-position: center;
       }
@@ -186,20 +186,38 @@
   
   </section>
   
-  
-  <footer class="py-3 px-10">
-    <p class="font-montserrat text-center text-sm md:text-lg">&copy; Floral 2026 - A project website for portfolio showcasing by Renzo Tolentino</p>
-  </footer>
-  
-  <!-- Small Screen Navbar  -->
-  <nav id="smallScreenNav" class="hidden text-white font-montserrat p-5 pt-25 fixed z-40 top-0 left-0 h-dvh w-full bg-secondary flex flex-col items-center justify-center gap-5">
-    <div class="flex flex-col gap-5 w-full h-full items-center justify-center md:gap-10">
-      <a href="index.html" class="text-2xl font-montserrat font-light md:text-4xl">Home</a>
-      <a href="portfolio.html" class="text-2xl font-montserrat font-light md:text-4xl">Portfolio</a>
-      <a href="service.html" class="text-2xl font-montserrat font-light md:text-4xl">Services</a>
-      <a href="contact.html" class="text-2xl font-montserrat font-light md:text-4xl">Contact us</a>
-    </div>
-  </nav>
+  <section class="w-full h-fit p-5">
+    <section class="relative w-full h-full aspect-square overflow-hidden flex flex-col gap-5 items-center justify-center sm:aspect-video lg:aspect-5/2">
+      <img loading="lazy" src="./image/faq-image-1.jpg" alt="" class="w-full h-full absolute z-10 top-0 left-0 object-cover lg:object-center" />
+      <div class="absolute z-20 top-0 left-0 w-full h-full bg-black/30"></div>
+      
+      <section class="absolute z-30 top-0 left-0 w-full h-full flex flex-col items-center justify-center gap-5 text-center p-5">
+        <p class="text-white text-[clamp(32px,5vw,60px)] font-playfair font-medium">Need a florist for your next event?</p>
+        <a href="contact.html" class="bg-primary flex items-center gap-1 px-3 py-2">
+          <p class="text-white text-sm font-montserrat md:text-md lg:text-lg">Contact us</p>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-up-right-icon lucide-arrow-up-right text-white size-5">
+            <path d="M7 7h10v10" />
+            <path d="M7 17 17 7" />
+          </svg>
+          </button>
+        </a>
+      </section>
+    </section>
+    
+    
+    <footer class="py-3 px-10">
+      <p class="font-montserrat text-center text-sm md:text-lg">&copy; Floral 2026 - A project website for portfolio showcasing by Renzo Tolentino</p>
+    </footer>
+    
+    <!-- Small Screen Navbar  -->
+    <nav id="smallScreenNav" class="hidden text-white font-montserrat p-5 pt-25 fixed z-40 top-0 left-0 h-dvh w-full bg-secondary flex flex-col items-center justify-center gap-5">
+      <div class="flex flex-col gap-5 w-full h-full items-center justify-center md:gap-10">
+        <a href="index.html" class="text-2xl font-montserrat font-light md:text-4xl">Home</a>
+        <a href="portfolio.html" class="text-2xl font-montserrat font-light md:text-4xl">Portfolio</a>
+        <a href="service.html" class="text-2xl font-montserrat font-light md:text-4xl">Services</a>
+        <a href="contact.html" class="text-2xl font-montserrat font-light md:text-4xl">Contact us</a>
+      </div>
+    </nav>
 </body>
 
 <script src="./js/service-page-script.js"></script>
