@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Floraly | Contacts</title>
+  
+  <!-- Google Fonts (Playfair Display, Montserrat) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS CDN Link -->
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <style type="text/tailwindcss">
+    @theme {
+        --color-primary: #283618;
+        --color-secondary: #606C38;
+        --color-background: #FEFAE0;
+        --color-white: #f2f2f2;
+        --color-black: #202020;
+        --color-disabled: #E5E5E5;
+        --color-error-dark: #9E2A2B;
+        --color-error-light: #9E2A2B50;
+        
+        --font-playfair: "Playfair Display";
+        --font-montserrat: "Montserrat";
+      }
+      
+      #hero {
+        background-image: url('./image/faq-image-1.jpg');
+        background-size: cover;
+        background-position: center;
+      }
+      #hero::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 8dvh;
+        bottom: 0;
+        left: 0;
+        z-index: 9;
+        background: linear-gradient(0deg, rgba(254, 250, 224, 1) 0%, rgba(254, 250, 224, 0) 100%);
+      }
+    </style>
+  
+  
+  <!-- JQuery CRN Link -->
+  <script src="https://code.jquery.com/jquery-4.0.0.js" integrity="sha256-9fsHeVnKBvqh3FB2HYu7g2xseAZ5MlN6Kz/qnkASV8U=" crossorigin="anonymous"></script>
+</head>
+
+<body class="scroll-smooth relative body w-full h-dvh bg-background">
+  <!-- Hero Section -->
+  <section id="hero" class="relative flex items-center justify-center p-5 w-full h-3/4 lg:h-[50dvh]">
+    <!-- Header -->
+    <header class="fixed top-0 left-0 z-50 p-5 w-full h-15 flex items-center justify-between transition duration-500 ease-out">
+      <a href="#hero" class="logo-title translate-y-10 opacity-0 transition duration-1000 ease-out font-playfair text-white text-[clamp(28px,2.5vw,40px)]">Floral</a>
+      
+      <button id="toggleNavBtn" class="translate-y-10 opacity-0 flex flex-col gap-1 transition duration-1000 delay-300 ease-out items-center justify-center lg:hidden">
+        <div id="arm1" class="w-5 h-0.5 bg-white rounded-full transition duration-300"></div>
+        <div id="arm3" class="w-5 h-0.5 bg-white rounded-full transition duration-300"></div>
+        <div id="arm2" class="w-5 h-0.5 bg-white rounded-full transition duration-300"></div>
+      </button>
+      
+      <!-- Large Screen Navbar  -->
+      <nav id=largeScreenNav class="hidden gap-5 w-full h-full items-center justify-end lg:flex">
+        <a href="index.html" class="text-md text-white font-montserrat">Home</a>
+        <a href="portfolio.html" class="text-md text-white font-montserrat">Portfolio</a>
+        <a href="service.html" class="text-md text-white font-montserrat">Services</a>
+        <a href="contact.html" class="text-md text-white font-montserrat">Contact Us</a>
+      </nav>
+    </header>
+    
+    <section class="w-full h-full lg:h-full pt-20 pb-15 landscape:pb-5">
+      <section class="h-full w-full flex flex-col justify-end">
+        <p class="slide-up font-playfair text-white text-4xl font-semibold translate-y-10 opacity-0 transition duration-1000 ease-out delay-200 md:text-6xl lg:text-[clamp(60px,5vw,80px)]">OUR SERVICES</p>
+      </section>
+    </section>
+  </section>
+  
+  <section class="w-full h-fit p-5 pt-20">
+    <div class="flex gap-3 w-full items-center">
+      <p class="font-playfair text-2xl font-medium text-primary">What we offer</p>
+      <div class="bg-primary/20 h-[1px] grow"></div>
+    </div>
+    
+    <br>
+    
+    <section class="flex flex-col gap-3 w-full h-fit font-montserrat">
+      <div class="flex flex-col gap-1">
+        <p class="text-lg font-medium">Weddings</p>
+        <p class="text-body">
+          Transform your special day with bespoke floral designs tailored to your unique love story. From breathtaking bridal bouquets and delicate boutonnieres to grand ceremony arches and elegant reception centerpieces, we curate every detail to complement your theme and create an enchanting, unforgettable atmosphere for you and your guests.
+        </p>
+      </div>
+      
+      <div class="flex flex-col gap-1">
+        <p class="text-lg font-medium">Special Ocassions</p>
+        <p class="text-body">
+          Mark life's most meaningful milestones with custom-designed floral arrangements that speak from the heart. Whether you are celebrating a milestone birthday, a romantic anniversary, a graduation, or a warm housewarming, our vibrant blooms add elegance and joy to the moments that matter most to you and your loved ones.
+        </p>
+      </div>
+      
+      <div class="flex flex-col gap-1">
+        <p class="text-lg font-medium">Corporate Events</p>
+        <p class="text-body">
+          Elevate your brand presence and impress your clients with sophisticated floral styling. We design premium installations for product launches, gala dinners, annual conferences, and high-profile boardrooms. Our arrangements are carefully crafted to reflect your company's aesthetic, adding a polished and welcoming touch to any business venue.
+        </p>
+      </div>
+    </section>
+  </section>
+  
+  <section class="w-full h-fit p-5 pt-20">
+    <div class="flex gap-3 w-full items-center">
+      <p class="font-playfair text-2xl font-medium text-primary">What's the process</p>
+      <div class="bg-primary/20 h-[1px] grow"></div>
+    </div>
+    
+    <br>
+    
+    <section class="flex flex-col gap-3 w-full h-fit font-montserrat">
+      <!-- Step 1: Initial Inquiry & Booking -->
+      <div class="flex flex-col gap-1">
+        <p class="text-lg font-medium">1. Initial Inquiry & Booking</p>
+        <p class="text-body">
+          Client reaches out via website contact form, email, or a phone call to provide basic event details including date, venue, guest count, and general style inspiration. Calendar availability is verified, and an initial consultation is scheduled.
+        </p>
+      </div>
+      
+      <!-- Step 2: Creative Consultation -->
+      <div class="flex flex-col gap-1">
+        <p class="text-lg font-medium">2. Creative Consultation</p>
+        <p class="text-body">
+          A 30-minute phone call, video chat, or in-person meeting to discuss color palettes, favorite flower varieties, venue layouts, and budget expectations. Visual mood boards and a detailed, itemized pricing proposal are sent to the client for review.
+        </p>
+      </div>
+      
+      <!-- Step 3: Proposal Review & Securing the Date -->
+      <div class="flex flex-col gap-1">
+        <p class="text-lg font-medium">3. Proposal Review & Securing the Date</p>
+        <p class="text-body">
+          Client reviews the floral proposal, requests any necessary adjustments, and signs the service agreement. A non-refundable retainer fee is processed and paid, officially locking in the event date on the florist's calendar.
+        </p>
+      </div>
+      
+      <!-- Step 4: Final Detail Review -->
+      <div class="flex flex-col gap-1">
+        <p class="text-lg font-medium">4. Final Detail Review</p>
+        <p class="text-body">
+          A final check-in meeting happens 4 to 6 weeks before the event to lock in final table counts, update bouquet quantities, and confirm strict venue setup time restrictions. The floral order is finalized and sent to trusted growers for sourcing.
+        </p>
+      </div>
+      
+      <!-- Step 5: Sourcing & Creation -->
+      <div class="flex flex-col gap-1">
+        <p class="text-lg font-medium">5. Sourcing & Creation</p>
+        <p class="text-body">
+          Fresh blooms arrive at the studio 2 to 4 days prior to the event to be safely hydrated, trimmed, and conditioned. Floral designers build the centerpieces and bouquets by hand before packing them into climate-controlled vehicles for transit.
+        </p>
+      </div>
+      
+      <!-- Step 6: On-Site Delivery & Setup -->
+      <div class="flex flex-col gap-1">
+        <p class="text-lg font-medium">6. On-Site Delivery & Setup</p>
+        <p class="text-body">
+          The floral team arrives at the venue on the exact morning of the event to pin boutonnieres, hand-deliver bridal bouquets, and build complex installations on-site. The space is completely transformed and ready before the first guest arrives.
+        </p>
+      </div>
+      
+      <!-- Step 7: Post-Event Teardown -->
+      <div class="flex flex-col gap-1">
+        <p class="text-lg font-medium">7. Post-Event Teardown</p>
+        <p class="text-body">
+          The team returns to the venue to execute a strike immediately following the conclusion of the event. Large structures are safely dismantled, rental vases are retrieved, and individual wrapped bouquets are left for clients to take home.
+        </p>
+      </div>
+      
+    </section>
+  </section>
+  
+  
+  
+  </section>
+  
+  
+  <footer class="py-3 px-10">
+    <p class="font-montserrat text-center text-sm md:text-lg">&copy; Floral 2026 - A project website for portfolio showcasing by Renzo Tolentino</p>
+  </footer>
+  
+  <!-- Small Screen Navbar  -->
+  <nav id="smallScreenNav" class="hidden text-white font-montserrat p-5 pt-25 fixed z-40 top-0 left-0 h-dvh w-full bg-secondary flex flex-col items-center justify-center gap-5">
+    <div class="flex flex-col gap-5 w-full h-full items-center justify-center md:gap-10">
+      <a href="index.html" class="text-2xl font-montserrat font-light md:text-4xl">Home</a>
+      <a href="portfolio.html" class="text-2xl font-montserrat font-light md:text-4xl">Portfolio</a>
+      <a href="service.html" class="text-2xl font-montserrat font-light md:text-4xl">Services</a>
+      <a href="contact.html" class="text-2xl font-montserrat font-light md:text-4xl">Contact us</a>
+    </div>
+  </nav>
+</body>
+
+<script src="./js/service-page-script.js"></script>
+
+</html>
