@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html class="scroll-smooth">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Floraly | Contacts</title>
+    
+    <!-- Google Fonts (Playfair Display, Montserrat) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS CDN Link -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style type="text/tailwindcss">
+    @theme {
+        --color-primary: #283618;
+        --color-secondary: #606C38;
+        --color-background: #FEFAE0;
+        --color-white: #f2f2f2;
+        --color-black: #202020;
+        --color-disabled: #E5E5E5;
+        --color-error-dark: #9E2A2B;
+        --color-error-light: #9E2A2B50;
+        
+        --font-playfair: "Playfair Display";
+        --font-montserrat: "Montserrat";
+      }
+    </style>
+    
+    <!-- JQuery CRN Link -->
+    <script src="https://code.jquery.com/jquery-4.0.0.js" integrity="sha256-9fsHeVnKBvqh3FB2HYu7g2xseAZ5MlN6Kz/qnkASV8U=" crossorigin="anonymous"></script>
+  </head>
+
+<body class="scroll-smooth relative body w-full h-dvh bg-background">
+    <!-- Hero Section -->
+    <section id="hero" class="flex items-center justify-center p-5 w-full h-full landscape:h-fit lg:h-dvh">
+      <!-- Header -->
+      <header class="fixed top-0 left-0 z-50 p-5 w-full h-15 flex items-center justify-between transition duration-500 ease-out">
+        <a href="#hero" class="logo-title translate-y-10 opacity-0 transition duration-1000 ease-out font-playfair text-primary text-[clamp(28px,2.5vw,40px)]">Floral</a>
+        
+        <button id="toggleNavBtn" class="translate-y-10 opacity-0 flex flex-col gap-1 transition duration-1000 delay-300 ease-out items-center justify-center lg:hidden">
+          <div id="arm1" class="w-5 h-0.5 bg-primary rounded-full transition duration-300"></div>
+          <div id="arm3" class="w-5 h-0.5 bg-primary rounded-full transition duration-300"></div>
+          <div id="arm2" class="w-5 h-0.5 bg-primary rounded-full transition duration-300"></div>
+        </button>
+        
+        <!-- Large Screen Navbar  -->
+        <nav id=largeScreenNav class="hidden gap-5 w-full h-full items-center justify-end lg:flex">
+          <a href="index.html" class="text-md text-primary font-montserrat">Home</a>
+          <a href="portfolio.html" class="text-md text-primary font-montserrat">Portfolio</a>
+          <a href="service.html" class="text-md text-primary font-montserrat">Services</a>
+          <a href="contact.html" class="text-md text-primary font-montserrat">Contact Us</a>
+        </nav>
+      </header>
+      
+      <section class="w-full h-full flex flex-col pt-20 gap-3 lg:h-dvh">
+        <section class="flex flex-col gap-10 grow lg:flex-row">
+          <p class="landing-text font-playfair font-semibold text-[clamp(50px,calc(8vw_+_1rem),1000px)] text-black landscape:text-[clamp(50px,calc(7vw_+_1rem),120px)] lg:text-[clamp(100px,calc(10vw_+_1rem),300px)] lg:grow">
+            <span class="translate-y-10 transition duration-1000 ease-out delay-0 inline-block opacity-0">GET IN</span>
+            <br>
+            <span class="translate-y-10 transition duration-1000 ease-out delay-300 inline-block opacity-0 overflow-hidden inline-block align-middle w-30 h-15 rounded-full md:w-35 lg:w-40 lg:h-22">
+              <img src="./image/contact-hero-image-1.jpg" class="w-full h-full object-cover" />
+            </span>
+            <span class="translate-y-10 transition duration-1000 ease-out delay-400 inline-block opacity-0">TOUCH</span>
+          </p>
+          
+          <section class="font-montserrat flex flex-col gap-3 border-t-1 border-primary/20 py-5 md:gap-6 lg:border-0 lg:w-1/4">
+            <p class="landing-text text-black font-playfair text-xl font-medium -mb-1">
+              <span class="translate-y-10 opacity-0 transition duration-1000 ease-out delay-0 inline-block">
+                Reach us directly.
+              </span>
+            </p>
+
+            <!-- Animation from left -> right -->
+            <a href="mailto:floralshop@gmail.com" class="landing-text flex items-center gap-2 md:text-xl">
+              <span class="translate-y-10 opacity-0 duration-1000 ease-out delay-200">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-mail-icon lucide-mail size-5 text-black"><path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"/><rect x="2" y="4" width="20" height="16" rx="2"/></svg>
+                <div>floralshop@gmail.com</div>
+              </span>
+            </a>
+            <a href="tel:0988726389" class="landing-text flex items-center gap-2 md:text-xl">
+              <span class="translate-y-10 opacity-0 duration-1000 ease-out delay-400">
+                <svg xmlns="http://www.w3.org/2000/svg"viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-phone-icon lucide-phone size-5 text-black"><path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"/></svg>
+                <div>+63 0988726389</div>
+              </span>
+            </a>
+            <a href="https://maps.google.com" class="landing-text flex items-center gap-2 md:text-xl">
+              <span class="translate-y-10 opacity-0 duration-1000 ease-out delay-600">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-map-pin-icon lucide-map-pin size-5 text-black"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg>
+                <div>Biringan City Philippines</div>
+              </span>
+            </a>
+          </section>
+        </section>
+        
+        <section class="socmed-link-list opacity-0 transition duration-1000 delay-0 font-montserrat w-full flex items-center justify-between border-y-1 border-primary/20 py-5">
+          <a href="https://facebook.com" class="text-center text-[clamp(14px,2vw,20px)] w-full px-5 border-r border-primary/20 translate-y-10 opacity-0 duration-1000 ease-out delay-200">Facebook</a>
+          <a href="https://instagram.com" class="text-center text-[clamp(14px,2vw,20px)] w-full px-5 border-r border-primary/20 translate-y-10 opacity-0 duration-1000 ease-out delay-250">Instagram</a>
+          <a href="https://tiktok.com" class="text-center text-[clamp(14px,2vw,20px)] w-full px-5 translate-y-10 opacity-0 duration-1000 ease-out delay-300">Tiktok</a>
+        </section>
+      </section>
+    </section>
+    
+    <footer class="py-3 px-10">
+      <p class="font-montserrat text-center text-sm md:text-lg">&copy; Floral 2026 - A project website for portfolio showcasing by Renzo Tolentino</p>
+    </footer>
+    
+     <!-- Small Screen Navbar  -->
+    <nav id="smallScreenNav" class="hidden text-white font-montserrat p-5 pt-25 fixed z-40 top-0 left-0 h-dvh w-full bg-secondary flex flex-col items-center justify-center gap-5">
+      <div class="flex flex-col gap-5 w-full h-full items-center justify-center md:gap-10">
+        <a href="index.html" class="text-2xl font-montserrat font-light md:text-4xl">Home</a>
+        <a href="portfolio.html" class="text-2xl font-montserrat font-light md:text-4xl">Portfolio</a>
+        <a href="service.html" class="text-2xl font-montserrat font-light md:text-4xl">Services</a>
+        <a href="contact.html" class="text-2xl font-montserrat font-light md:text-4xl">Contact us</a>
+      </div>
+    </nav>
+</body>
+
+<script src="./js/contact-page-script.js"></script>
+
+</html>
